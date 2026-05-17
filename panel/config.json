@@ -1,0 +1,39 @@
+{
+  "news": {
+    "sectors": {
+      "Bahis": {
+        "keywords": ["bahis", "iddaa", "kumar", "şans oyunu", "spor bahis", "illegal bahis", "yasadışı bahis", "canlı bahis", "lisanslı bahis"],
+        "color": "#e74c3c"
+      },
+      "İnşaat": {
+        "keywords": ["inşaat", "yapı", "konut", "gayrimenkul", "müteahhit", "toki", "kentsel dönüşüm", "bina", "arsa"],
+        "color": "#e67e22"
+      },
+      "Yazılım": {
+        "keywords": ["yazılım", "teknoloji", "yapay zeka", " ai ", "uygulama", "startup", "dijital", "siber", "veri", "bulut", "saas", "fintech"],
+        "color": "#3498db"
+      },
+      "Yeme & İçme": {
+        "keywords": ["restoran", "gıda", "içecek", "fast food", "café", "kafe", "zincir", "franchise", "yemek"],
+        "color": "#27ae60"
+      },
+      "Enerji": {
+        "keywords": ["enerji", "elektrik", "doğalgaz", "yenilenebilir", "petrol", "güneş", "rüzgar", "nükleer", "epdk", "botaş", "akaryakıt"],
+        "color": "#8e44ad"
+      }
+    },
+    "rss_feeds": {
+      "Bloomberg HT": "https://www.bloomberght.com/rss",
+      "Dünya Gazetesi": "https://www.dunya.com/rss",
+      "Ekonomim": "https://www.ekonomim.com/rss",
+      "Para Analiz": "https://www.paraanaliz.com/feed",
+      "Sabah Ekonomi": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "Patronlar Dünyası Ekonomi": "https://www.patronlardunyasi.com/rss/ekonomi",
+      "Patronlar Dünyası Finans": "https://www.patronlardunyasi.com/rss/finans",
+      "Patronlar Dünyası Teknoloji": "https://www.patronlardunyasi.com/rss/teknoloji"
+    }
+  },
+  "institutions": {
+    "enabled": ["SPK", "BDDK", "EPDK", "Rekabet Kurumu", "Ticaret Bakanlığı", "İstanbul Ticaret Odası", "TBMM"]
+  }
+}
