@@ -1,0 +1,10 @@
+# Gizli ayarlar asla yüklenmez
+.mail_env
+*.env
+# Yedek ve geçici dosyalar
+*.bak
+*.bak-*
+__pycache__/
+venv/
+*.log
+output/
