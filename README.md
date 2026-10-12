@@ -37,6 +37,18 @@ Adım adım kurulum kılavuzu için → [KURULUM.md](KURULUM.md)
 Tahmini kurulum süresi: 45-60 dakika  
 Aylık maliyet: ~4-5€ (yalnızca VPS)
 
+### Sürüm Notları
+
+**v1.1 (Ekim 2026)**
+
+- Resmî Gazete alıcıları artık paneldeki "Mail Alıcıları" alanından okunuyor; tüm alıcılar maili alıyor
+- Panelde tanımlanan sektörler, anahtar kelimeler ve RSS kaynakları artık haber taramasında kullanılıyor
+- Türkçe büyük "İ" harfiyle başlayan başlıkların anahtar kelimelerle eşleşmemesi düzeltildi
+- Sektörel Haberler'e 20 dakikalık süre sınırı eklendi (yapay zeka yanıt vermezse program takılı kalmıyor)
+- Panelde güncel Gemini modelleri: 3.5 Flash-Lite (önerilen) ve 3.8 Flash
+- Rekabet Kurumu ve Ticaret Bakanlığı artık "yeni yayımlanan" kayıtlara göre takip ediliyor (karar tarihine göre değil)
+- SPK bülten adresi yıla göre otomatik güncelleniyor
+
 ---
 
 <a name="english"></a>

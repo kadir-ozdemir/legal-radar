@@ -164,7 +164,7 @@ def page_settings():
         mail_from = st.text_input(
             "Gönderici Görünen Adı",
             value=env.get("RG_MAIL_FROM", ""),
-            placeholder="Legal Radar - Legal <gonderici@sirket.com>"
+            placeholder="Legal Radar - Legal <ornek@example.com>"
         )
         st.divider()
         st.subheader("👥 Alıcılar")
@@ -175,7 +175,7 @@ def page_settings():
         st.divider()
         st.subheader("🤖 Gemini API")
         gemini_key = st.text_input("API Anahtarı", value=env.get("GEMINI_API_KEY", ""), type="password")
-        opts = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+        opts = ["gemini-3.5-flash-lite", "gemini-3.8-flash", "gemini-2.5-flash"]
         cur  = env.get("GEMINI_MODEL", "gemini-2.5-flash")
         gemini_model = st.selectbox("Model", opts, index=opts.index(cur) if cur in opts else 0)
         st.divider()

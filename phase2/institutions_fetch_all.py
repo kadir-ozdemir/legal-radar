@@ -58,7 +58,7 @@ def fetch_url(url: str, insecure: bool = False) -> str:
 
 
 def parse_spk_today():
-    url = "https://spk.gov.tr/spk-bultenleri/2026-yili-spk-bultenleri"
+    url = f"https://spk.gov.tr/spk-bultenleri/{today.year}-yili-spk-bultenleri"
     page = fetch_url(url, insecure=True)
 
     pattern = re.compile(
@@ -146,7 +146,7 @@ def parse_ticaret_today():
             "link": full_url,
         }
 
-        if extracted_date == today_bddk_str:
+        if True:  # yeni duyuru kontrolü main() içinde
             records.append(record)
 
     return records
@@ -208,7 +208,7 @@ def parse_rekabet_today():
         clean_source_summary = html.unescape(re.sub(r"<[^>]+>", "", source_summary)).strip()
         full_url = urljoin(base, href)
 
-        if clean_date == today_rekabet_str:
+        if True:  # yeni karar kontrolü main() içinde
             records.append({
                 "institution": "Rekabet Kurumu",
                 "source_type": "board_decisions",
@@ -418,6 +418,37 @@ def parse_tbmm_komisyon_today():
 
     return records
 
+
+SEEN_FILE = Path("/root/monitoring/output/seen_links.json")
+SEEN_INSTITUTIONS = {"Rekabet Kurumu", "Ticaret Bakanlığı"}
+
+
+def _filter_seen(records):
+    try:
+        seen = json.loads(SEEN_FILE.read_text(encoding="utf-8"))
+        if not isinstance(seen, dict):
+            seen = {}
+    except Exception:
+        seen = {}
+    out = []
+    for r in records:
+        inst = r.get("institution")
+        if inst not in SEEN_INSTITUTIONS:
+            out.append(r)
+            continue
+        first_time = inst not in seen
+        links = seen.setdefault(inst, [])
+        if r["link"] in links:
+            continue
+        links.append(r["link"])
+        if not first_time:
+            out.append(r)
+    for inst in seen:
+        seen[inst] = seen[inst][-500:]
+    SEEN_FILE.write_text(json.dumps(seen, ensure_ascii=False, indent=2), encoding="utf-8")
+    return out
+
+
 def main():
     # config.json'dan aktif kurumları oku
     enabled = None
@@ -441,6 +472,8 @@ def main():
     if inc("İstanbul Ticaret Odası"): combined.extend(parse_ito_today())
     if inc("TBMM"):                   combined.extend(parse_tbmm_genel_kurul_today())
     if inc("TBMM"):                   combined.extend(parse_tbmm_komisyon_today())
+
+    combined = _filter_seen(combined)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(combined, f, ensure_ascii=False, indent=2)

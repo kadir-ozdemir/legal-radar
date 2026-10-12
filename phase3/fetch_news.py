@@ -104,6 +104,13 @@ SECTOR_COLORS = {
     "Enerji":      "#8e44ad",
 }
 
+_cfg_sectors, _cfg_colors, _cfg_rss = _load_news_config()
+if _cfg_sectors:
+    SECTORS = {k: [w.replace("İ", "i").lower() for w in v] for k, v in _cfg_sectors.items()}
+    SECTOR_COLORS = _cfg_colors
+if _cfg_rss:
+    RSS_FEEDS = _cfg_rss
+
 # ── Duplicate Prevention ──────────────────────────────────────────────────────
 
 def load_sent_hashes() -> set:
@@ -145,7 +152,7 @@ def is_recent(entry: dict) -> bool:
 
 
 def keyword_match(text: str, keywords: list) -> bool:
-    text_lower = text.lower()
+    text_lower = text.replace("İ", "i").lower()
     return any(kw in text_lower for kw in keywords)
 
 
@@ -198,7 +205,7 @@ def gemini_classify_and_summarize(articles: list) -> list:
         prompt = f"""Aşağıdaki {len(batch)} haberi analiz et.
 
 Her haber için:
-1. Şu sektörlerden hangisine(lerine) giriyor: Bahis, İnşaat, Yazılım, Yeme & İçme, Enerji
+1. Şu sektörlerden hangisine(lerine) giriyor: {', '.join(SECTORS)}
 2. Hiçbirine girmiyorsa sektorler alanını boş bırak.
 3. İlgiliyse haberi Türkçe 2 cümleyle özetle.
 

@@ -2,24 +2,159 @@
   "news": {
     "sectors": {
       "Bahis": {
-        "keywords": ["bahis", "iddaa", "kumar", "şans oyunu", "spor bahis", "illegal bahis", "yasadışı bahis", "canlı bahis", "lisanslı bahis"],
+        "keywords": [
+          "bahis",
+          "iddaa",
+          "kumar",
+          "şans oyunu",
+          "spor toto",
+          "milli piyango",
+          "sanal bahis",
+          "yasadışı bahis",
+          "lisanslı bahis",
+          "casino",
+          "kumarhane"
+        ],
         "color": "#e74c3c"
       },
       "İnşaat": {
-        "keywords": ["inşaat", "yapı", "konut", "gayrimenkul", "müteahhit", "toki", "kentsel dönüşüm", "bina", "arsa"],
+        "keywords": [
+          "inşaat",
+          "müteahhit",
+          "konut",
+          "gayrimenkul",
+          "emlak",
+          "toki",
+          "kentsel dönüşüm",
+          "yapı denetim",
+          "yapı malzeme",
+          "yapı ruhsat",
+          "iskan",
+          "imar",
+          "arsa",
+          "kat karşılığı",
+          "çimento",
+          "hazır beton",
+          "altyapı yatırım"
+        ],
         "color": "#e67e22"
       },
       "Yazılım": {
-        "keywords": ["yazılım", "teknoloji", "yapay zeka", " ai ", "uygulama", "startup", "dijital", "siber", "veri", "bulut", "saas", "fintech"],
+        "keywords": [
+          "yazılım",
+          "yapay zeka",
+          "yapay zekâ",
+          "\" ai \"",
+          "siber",
+          "veri merkezi",
+          "kişisel veri",
+          "bulut bilişim",
+          "saas",
+          "fintech",
+          "startup",
+          "girişim sermaye",
+          "teknoloji şirket",
+          "teknoloji girişim",
+          "dijital dönüşüm",
+          "e-ticaret",
+          "blockchain"
+        ],
         "color": "#3498db"
       },
       "Yeme & İçme": {
-        "keywords": ["restoran", "gıda", "içecek", "fast food", "café", "kafe", "zincir", "franchise", "yemek"],
+        "keywords": [
+          "restoran",
+          "gıda",
+          "içecek",
+          "yemek",
+          "fast food",
+          "kafe",
+          "café",
+          "kahve zinciri",
+          "restoran zinciri",
+          "franchise",
+          "catering",
+          "hazır yemek"
+        ],
         "color": "#27ae60"
       },
       "Enerji": {
-        "keywords": ["enerji", "elektrik", "doğalgaz", "yenilenebilir", "petrol", "güneş", "rüzgar", "nükleer", "epdk", "botaş", "akaryakıt"],
+        "keywords": [
+          "enerji",
+          "elektrik",
+          "doğalgaz",
+          "doğal gaz",
+          "lng",
+          "petrol",
+          "akaryakıt",
+          "yenilenebilir",
+          "güneş enerji",
+          "rüzgar",
+          "rüzgâr",
+          "nükleer",
+          "santral",
+          "boru hattı",
+          "epdk",
+          "botaş"
+        ],
         "color": "#8e44ad"
+      },
+      "Otel": {
+        "keywords": [
+          "otel",
+          "konaklama",
+          "turizm",
+          "turist",
+          "tatil köyü",
+          "pansiyon",
+          "apart",
+          "resort",
+          "her şey dahil",
+          "doluluk oran",
+          "yatak kapasitesi",
+          "türsab",
+          "türob",
+          "turizm yatırım",
+          "rixos",
+          "hilton",
+          "marriott",
+          "accor",
+          "wyndham"
+        ],
+        "color": "#3498db"
+      },
+      "Hukuk": {
+        "keywords": [
+          "hukuk",
+          "avukat",
+          "mahkeme",
+          "yargıtay",
+          "danıştay",
+          "anayasa mahkemesi",
+          "yargı",
+          "savcı",
+          "soruşturma",
+          "iddianame",
+          "dava",
+          "tazminat",
+          "tahkim",
+          "arabulucu",
+          "icra",
+          "iflas",
+          "konkordato",
+          "kanun teklifi",
+          "yönetmelik",
+          "tebliğ",
+          "kararname",
+          "yargı paketi",
+          "adalet bakan",
+          "barosu",
+          "noter",
+          "kvkk",
+          "idari para cezası",
+          "bilirkişi"
+        ],
+        "color": "#3498db"
       }
     },
     "rss_feeds": {
@@ -34,6 +169,13 @@
     }
   },
   "institutions": {
-    "enabled": ["SPK", "BDDK", "EPDK", "Rekabet Kurumu", "Ticaret Bakanlığı", "İstanbul Ticaret Odası", "TBMM"]
+    "enabled": [
+      "SPK",
+      "BDDK",
+      "EPDK",
+      "Rekabet Kurumu",
+      "İstanbul Ticaret Odası",
+      "TBMM"
+    ]
   }
 }
